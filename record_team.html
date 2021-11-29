@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Record-team</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="Record_team.css"/>
+</head>
+<body>
+    <div id="rank1">
+		<span>1位</span>
+	</div>
+    <div id="rank2">
+		<span>2位</span>
+	</div>
+    <div id="rank3">
+		<span>3位</span>
+	</div>
+    <div id="rank4">
+		<span>4位</span>
+	</div>
+    <div id="rank5">
+		<span>5位</span>
+	</div>
+    <div id="rank6">
+		<span>6位</span>
+	</div>
+    <div id="rank7">
+		<span>7位</span>
+	</div>
+    <div id="rank8">
+		<span>8位</span>
+	</div>
+    <div id="rank9">
+		<span>9位</span>
+	</div>
+    <div id="rank10">
+		<span>10位</span>
+	</div>
+    <div id="rank11">
+		<span>11位</span>
+	</div>
+    <div id="rank12">
+		<span>12位</span>
+	</div>
+    <div id="rank13">
+		<span>13位</span>
+	</div>
+    <div id="rank14">
+		<span>14位</span>
+	</div>
+    <div id="rank15">
+		<span>15位</span>
+	</div>
+    <div id="rank16">
+		<span>16位</span>
+	</div>
+    <div id="rank17">
+		<span>17位</span>
+	</div>
+    <img id="blank1" src="blank.jpg">
+	<a href="home.html"><img id="home-g" src="home-gry.PNG"></a>
+    <img id="record_g" src="record-gre.PNG" onclick="c()" >
+    <img id="record_i" src="stamp-gry.PNG" onclick="a()">
+<svg width="100vw" height="200vh">
+<rect id="rect_1" x="10vw" y="12vh" rx="20" ry="20" width="80vw" height="10vh" fill=#CFB13C></rect>
+<rect id="rect_2" x="12vw" y="25vh" rx="18" ry="18" width="76vw" height="8vh" fill=#CFD3D7></rect>
+<rect id="rect_3" x="13vw" y="35vh" rx="16" ry="16" width="74vw" height="7vh" fill=#B1773B></rect>
+<rect id="rect_4" x="13vw" y="45vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_5" x="13vw" y="55vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_6" x="13vw" y="65vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_7" x="13vw" y="75vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_8" x="13vw" y="85vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_9" x="13vw" y="95vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_10" x="13vw" y="105vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_11" x="13vw" y="115vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_12" x="13vw" y="125vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_13" x="13vw" y="135vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_14" x="13vw" y="145vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_15" x="13vw" y="155vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_16" x="13vw" y="165vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+<rect id="rect_17" x="13vw" y="175vh" rx="16" ry="16" width="74vw" height="7vh" fill=#BCB0B0></rect>
+</svg>
+</body>
+
+<script src="data.js"></script>
+
+<script>
+  let urlParam = location.search.substring(1);//URLパラメータ列の取り出し
+    if (urlParam) {
+        let param = urlParam.split('&'); //URLパラメータを＆で分割
+        let paramArray = [];
+        for (i = 0; i < param.length; i++) {
+            let paramItem = param[i].split('=');
+            paramArray[paramItem[0]] = paramItem[1]; //個々のURLパラメータの＝前後で分割
+        }
+        for (i = 0; i < database.length; i++) {
+            if (paramArray.uid == database[i][0]) {//uidとデータベースのi番目のユーザIDが一致するか？
+                resultDisplay(database[i][5]);//一致したら数値3に基づいて表示
+            }
+        }
+        function a(){  
+		
+		window.location.href='record_indi.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
+
+		}
+        function c(){  
+		
+		window.location.href='record_home.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
+
+		}		
+    }
+
+    function resultDisplay(result) {
+        
+            document.getElementById('rect_'+database[i][5]).style.setProperty("fill","rgba(255,0,0,1)");
+    }
+    
+
+    </script>
+
+
+</html>

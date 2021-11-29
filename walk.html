@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="walk.css"/>
+</head>
+<body>
+	<img id="walk-home" src="walk.PNG">	
+	<a href="car.html"><img id="car-g" src="car-gry.PNG"></a>
+	<a href="train.html"><img id="train-g" src="train-gry.PNG"></a>
+	<a href="home.html"><img id="home-g" src="home-gry.PNG"></a>	
+	<a href="bike.html"><img id="bike-g" src="bike-gry.PNG"></a>	
+	<a href="walk.html"><img id="walk-g" src="walk-gre.PNG"></a>
+	<a href="record_login.html"><img id="record-gry" src="record-gry.PNG"></a>	
+	
+	<div id="speed-title">
+		<span>歩いた速さごとの時間を<br/>入力してください</span>
+	</div>
+	<form>
+        <button id="decision-bottom">決定</button>
+    </form>
+	<div id="speed1">
+		<span>超早い</span><span style="font: size 13px;">  　</span>
+	</div>
+	<div id="speed2">
+		<span>早い　　</span>
+	</div>
+	<div id="speed3">
+		<span>普通 </span>
+	</div>
+	<div id="speed4">
+		<span>ゆっくり </span>
+	</div>
+	<div id="speed5">
+		<span>超ゆっくり  </span>
+	</div>
+	<svg class="line1" viewBox="0 0 460 3">
+		<path id="line1" d="M 0 0 L 400 0">
+		</path>
+	</svg>
+	<svg class="line2" viewBox="0 0 460 3">
+		<path id="line2" d="M 0 0 L 400 0">
+		</path>
+	</svg>
+	<svg class="line3" viewBox="0 0 460 3">
+		<path id="line3" d="M 0 0 L 400 0">
+		</path>
+	</svg>
+	<svg class="line4" viewBox="0 0 460 3">
+		<path id="line4" d="M 0 0 L 400 0">
+		</path>
+	</svg>
+	<svg class="line5" viewBox="0 0 460 3">
+		<path id="line5" d="M 0 0 L 400 0">
+		</path>
+	</svg>
+	<div id="Text_1">
+		<span>分</span>
+	</div>
+	<div id="Text_2">
+		<span>分</span>
+	</div>
+	<div id="Text_3">
+		<span>分</span>
+	</div>
+	<div id="Text_4">
+		<span>分</span>
+	</div>
+	<div id="Text_5">
+		<span>分</span>
+	</div>
+	<form action="#" name="form1">
+		<select id="time1" onChange="keisan()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+		<option>6</option>
+		<option>7</option>
+		<option>8</option>
+		<option>9</option>
+		<option>10</option>
+		<option>11</option>
+		<option>12</option>
+		<option>13</option>
+		<option>14</option>
+		<option>15</option>
+		<option>16</option>
+		<option>17</option>
+		<option>18</option>
+		<option>19</option>
+		<option>20</option>
+		<option>21</option>
+		<option>22</option>
+		<option>23</option>
+		<option>24</option>
+		<option>25</option>
+        </select>
+		<select id="time2" onChange="keisan()">
+			<option>0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+			<option>13</option>
+			<option>14</option>
+			<option>15</option>
+			<option>16</option>
+			<option>17</option>
+			<option>18</option>
+			<option>19</option>
+			<option>20</option>
+			<option>21</option>
+			<option>22</option>
+			<option>23</option>
+			<option>24</option>
+			<option>25</option>
+		</select>
+		<select id="time3" onChange="keisan()">
+				<option>0</option>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+				<option>6</option>
+				<option>7</option>
+				<option>8</option>
+				<option>9</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				<option>13</option>
+				<option>14</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+				<option>25</option>
+		</select>
+		<select id="time4" onChange="keisan()">
+					<option>0</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+					<option>17</option>
+					<option>18</option>
+					<option>19</option>
+					<option>20</option>
+					<option>21</option>
+					<option>22</option>
+					<option>23</option>
+					<option>24</option>
+					<option>25</option>
+		</select>
+	    <select id="time5" onChange="keisan()">
+						<option>0</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+						<option>7</option>
+						<option>8</option>
+						<option>9</option>
+						<option>10</option>
+						<option>11</option>
+						<option>12</option>
+						<option>13</option>
+						<option>14</option>
+						<option>15</option>
+						<option>16</option>
+						<option>17</option>
+						<option>18</option>
+						<option>19</option>
+						<option>20</option>
+						<option>21</option>
+						<option>22</option>
+						<option>23</option>
+						<option>24</option>
+						<option>25</option>
+		</select>
+	   <input ype="text" id="total">
+    </form>
+	</svg>
+</div>
+</body>
+<script type="text/javascript">
+
+function keisan(){
+   var kal1=document.form1.time1.selectedIndex*6.25;
+   var kal2=document.form1.time2.selectedIndex*1.05*4.3;
+   var kal3=document.form1.time3.selectedIndex*1.05*3.5;
+   var kal4=document.form1.time4.selectedIndex*1.05*2.8;
+   var kal5=document.form1.time5.selectedIndex*2.1;
+   var result=kal1 + kal2 + kal3 + kal4 + kal5;
+   document.form1.total.value = result;
+}
+let button = document.getElementById("decision-bottom");
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+		var send = "<a href=\"mailto:18ad055@ms.dendai.ac.jp?subject=Hi&body=" +document.form1.total.value+ "\">Mail</a>"
+        document.getElementById("decision-bottom").innerHTML = send;
+	})
+</script>
+</html>

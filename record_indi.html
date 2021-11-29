@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Record-indi</title>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="record_indi.css"/>
+</head>
+<body>
+    <div style="position: relative;left: 2vw;top: 5vh;">
+    <img id="line" src="line.png">
+    <div style="position: absolute;left: -1vw;top: -1vh;">
+    <svg width="98vw" height="120vh">
+        <ellipse id="Ellipse_11" rx="45" ry="45" cx="20vw" cy="100vh" fill="rgba(163,146,126,1)" ></ellipse>
+		<ellipse id="Ellipse_10" rx="45" ry="45" cx="50vw" cy="91vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_9" rx="45" ry="45" cx="85vw" cy="81vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_8" rx="45" ry="45" cx="65vw" cy="75vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_7" rx="45" ry="45" cx="24vw" cy="74vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_6" rx="45" ry="45" cx="50vw" cy="64vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_5" rx="45" ry="45" cx="67vw" cy="56vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_4" rx="45" ry="45" cx="24vw" cy="42vh" fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_3" rx="45" ry="45"cx="56vw" cy="35vh"  fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_2" rx="45" ry="45"cx="80vw" cy="27vh"  fill="rgba(163,146,126,1)" ></ellipse>
+        <ellipse id="Ellipse_1" rx="45" ry="45" cx="49vw" cy="14vh" fill="rgba(163,146,126,1)" ></ellipse>
+    </svg>
+    </div>
+	</div>
+    <img id="blank" src="blank.jpg">
+    <a href="home.html"><img id="home-g" src="home-gry.PNG"></a>
+    <img id="record_g" src="record-gre.PNG" onclick="c()">
+   <img id="record_t" src="rank-gry.PNG" onclick="b()">
+</body>
+
+<script src="data.js"></script>
+
+<script>
+    let urlParam = location.search.substring(1);//URLパラメータ列の取り出し
+    if (urlParam) {
+        let param = urlParam.split('&'); //URLパラメータを＆で分割
+        let paramArray = [];
+        for (i = 0; i < param.length; i++) {
+            let paramItem = param[i].split('=');
+            paramArray[paramItem[0]] = paramItem[1]; //個々のURLパラメータの＝前後で分割
+        }
+        for (i = 0; i < database.length; i++) {
+            if (paramArray.uid == database[i][0]) {//uidとデータベースのi番目のユーザIDが一致するか？
+                resultDisplay(database[i][4]);//一致したら数値3に基づいて表示
+            }
+        }
+		function b(){  
+		
+		window.location.href='record_team.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
+
+		}
+		function c(){  
+		
+		window.location.href='record_home.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
+
+		}	
+    }
+
+    function resultDisplay(result) {
+        for (i=11; i>=result; i--){
+            document.getElementById('Ellipse_'+i).style.setProperty("fill","rgba(255,0,0,1)");
+        }
+    }
+    </script>
+
+
+
+</html>

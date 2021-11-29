@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login page</title>
+</head>
+<script>
+    function jump() {
+        let uid = document.getElementById("userid").value;
+        window.location.href='record_home.html?uid='+uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
+    }
+</script>
+<body>
+    <div class="full-page">
+    <div style="position: relative; top:0px;left:0px;">
+       <img id="train-l" src=train-l.PNG>
+       <img id="walk-l" src=walk-l.PNG>
+       <img id="car-l" src=car-l.PNG>
+       <img id="bike-l" src=bike-l.PNG>
+       <div style="position: absolute;top:-1px; left:-1px;">
+       <form>
+            <input id="userid" type="text" id="userid">
+            <input ID="btn"type="button" value="LOGIN" onclick="jump()">
+        </form>
+       </div>
+    </div>
+    </div>
+</body>
+<style>
+    #train-l{
+        position: absolute;
+        top:8vh;
+        left:50vw;
+        width: 200px;
+        height: 200px;
+    }
+    #walk-l{
+        position: absolute;
+        top:20vh;
+        left:-5vw;
+        width: 300px;
+        height: 300px;
+    }
+    #car-l{
+        position: absolute;
+        top:40vh;
+        left:-30vw;
+        width: 320px;
+        height: 320px;
+    }
+    #bike-l{
+        position: absolute;
+        top:50vh;
+        left:30vw;
+        width: 400px;
+        height: 400px;
+    }
+    #userid{
+        position: absolute;
+        top:48vh;
+        left:10vw;
+        width: 50vw;
+        height:25px;
+    }
+    #btn{
+        position: absolute;
+        top:48.5vh;
+        left:70vw;
+        width: 60px;
+        height:25px; 
+    }
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .full-page{
+        width:150vw;
+        height:110vh;
+        background:#D3FFFD;
+    }
+</style>
+
+</html>

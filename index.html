@@ -1,0 +1,47 @@
+<head>
+    <!DOCTYPE html>
+    <title>mailtest</title>
+</head>
+<html>
+
+<body>
+    <div id="mailcontents">bluh bluh</div>
+    <form>
+        A:<input type="text" id="formA">
+        B:<input type="text" id="formB">
+        <button id="btn">GO</button>
+    </form>
+    
+</body>
+<style>
+    #btn {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+  }
+  #btn:active {
+    /*ボタンを押したとき*/
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+  }
+</style>
+<script>
+    let button = document.getElementById("btn");
+
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+        var fA = document.getElementById("formA").value;
+        var fB = document.getElementById("formB").value;
+
+        var answer = "<a href=\"mailto:aaa@bbb?subject=Hi&body=" + fA + fB + "\">Mail</a>"
+
+        document.getElementById("mailcontents").innerHTML = answer;
+    })
+</script>
+
+</html>

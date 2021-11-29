@@ -4,13 +4,7 @@
 <head>
     <title>Login page</title>
 </head>
-<script>
-    function jump() {
-        let uid = document.getElementById("userid").value;
-        window.location.href='record_home.html?uid='+uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
-    }
-</script>
-<body>
+    <body>
     <div class="full-page">
     <div style="position: relative; top:0px;left:0px;">
        <img id="train-l" src=train-l.PNG>
@@ -26,6 +20,13 @@
     </div>
     </div>
 </body>
+<script>
+    function jump() {
+        let uid = document.getElementById("userid").value;
+        window.location.href='record_home.html?uid='+uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
+    }
+</script>
+
 <style>
     #train-l{
         position: absolute;

@@ -1,47 +1,71 @@
 <head>
     <!DOCTYPE html>
-    <title>mailtest</title>
+    <title>home</title>
 </head>
 <html>
 
 <body>
-    <div id="mailcontents">bluh bluh</div>
-    <form>
-        A:<input type="text" id="formA">
-        B:<input type="text" id="formB">
-        <button id="btn">GO</button>
-    </form>
+   <a href="car.html"><img id="car-g" src="car-gre.PNG"></a>
+	<a href="train.html"><img id="train-g" src="train-gre.PNG"></a>
+	<a href="bike.html"><img id="bike-g" src="bike-gre.PNG"></a>	
+	<a href="walk.html"><img id="walk-g" src="walk-gre.PNG"></a>
+	<a href="record_login.html"><img id="record-gry" src="record-gry.PNG"></a>
+	<div id="title">
+		<span>今日の移動方法を<br/>選択してください</span>
+	</div>
     
 </body>
 <style>
-    #btn {
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #668ad8;/*ボタン色*/
-    color: #FFF;
-    border-bottom: solid 4px #627295;
-    border-radius: 3px;
-  }
-  #btn:active {
-    /*ボタンを押したとき*/
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);/*下に動く*/
-    border-bottom: none;/*線を消す*/
-  }
+  #car-g {
+	position: absolute;
+	width: 38vw;
+	height: 38vw;
+	left: 12vw;
+	top: 23vh;	
+}
+#train-g{
+	position: absolute;
+	width: 38vw;
+	height: 38vw;
+	left: 12vw;
+	top: 50vh;
+}
+#bike-g {
+	position: absolute;
+	width: 38vw;
+	height: 38vw;
+	left: 55vw;
+	top: 23vh;
+}
+#walk-g {
+	position: absolute;
+	width: 38vw;
+	height: 38vw;
+	left: 55vw;
+	top: 50vh;
+	overflow: visible;
+}
+#record-gry {
+	position: absolute;
+	width: 13.5vw;
+	height:13.5vw;
+	left: 4vw;
+	top: 2vw;	
+}
+#title {
+	left: 28vw;
+	top: 13vh;
+	position: absolute;
+	overflow: visible;
+	width: 85vw;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 6vw;
+	color: rgba(148,139,155,1);
+}
+
 </style>
-<script>
-    let button = document.getElementById("btn");
 
-    button.addEventListener("click", function (e) {
-        e.preventDefault();
-        var fA = document.getElementById("formA").value;
-        var fB = document.getElementById("formB").value;
-
-        var answer = "<a href=\"mailto:aaa@bbb?subject=Hi&body=" + fA + fB + "\">Mail</a>"
-
-        document.getElementById("mailcontents").innerHTML = answer;
-    })
-</script>
 
 </html>

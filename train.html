@@ -16,7 +16,9 @@
 	<a href="walk.html"><img id="walk-g" src="walk-gry.PNG"></a>
 	<a href="record_login.html"><img id="record-gry" src="record-gry.PNG"></a>	
 	
-	
+	<div id="speed-title">
+		<span>電車でのトレーニングを<br/>入力してください</span>
+	</div>
 	<form>
         <button id="decision-bottom">決定</button>
     </form>
@@ -322,7 +324,7 @@ let button = document.getElementById("decision-bottom");
     button.addEventListener("click", function (e) {
         e.preventDefault();
 		var send = "<a href=\"mailto:18ad055@ms.dendai.ac.jp?subject=Hi&body=" +document.form1.total.value+ "\">Mail</a>"
-        document.getElementById("decision-bottom").innerHTML = send;
+        document.getElementById("speed-title ").innerHTML = send;
 	})
 </script>
 </html>

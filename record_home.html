@@ -206,22 +206,33 @@
 				document.getElementById("message5").innerText = database[i][5];  //一致したら数値2"順位"
 			}			
         }
-	  
-		function a(){  
+	  	const a = () => {  
 		
 		window.location.href='record_indi.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
 
 		}
-		function b(){  
+		const b = () => {  
 		
 		window.location.href='record_team.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
 
 		}
-		function c(){  
+		const c = () => {  
 		
 		window.location.href='record_home.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
 
 		}	
+		const rect_stamp = document.getElementById("rect-stamp");  // idがrect_stampの要素を取得する
+		rect_stamp.addEventListener("touchend", () => {
+
+			a();
+		});
+
+		document.getElementById("user-stamp").addEventListener("touchend", () => { a(); });
+		document.getElementById("stamp"     ).addEventListener("touchend", () => { a(); });
+		document.getElementById("rect-rank" ).addEventListener("touchend", () => { b(); });
+		document.getElementById("user-rank" ).addEventListener("touchend", () => { b(); });
+		document.getElementById("rank"      ).addEventListener("touchend", () => { b(); });
+			
 	}
 </script>
 

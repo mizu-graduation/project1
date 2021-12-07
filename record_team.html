@@ -328,16 +328,16 @@
             let paramItem = param[i].split('=');
             paramArray[paramItem[0]] = paramItem[1]; //個々のURLパラメータの＝前後で分割
         }
-        document.getElementById("idDisplay").innerText = paramArray.uid; //URLパラメータuidの表示
-        for (i = 0; i < database.length; i++) {
+	    for (i = 0; i < database.length; i++) {
             if (paramArray.uid == database[i][0]) {//uidとデータベースのi番目のユーザIDが一致するか？
-				document.getElementById("name").innerText = database[i][1];              
-				document.getElementById("message2").innerText = database[i][2];//一致したら数値１"cal"
-				document.getElementById("message3").innerText = database[i][3];  //一致したら数値2"順位"
-				document.getElementById("message4").innerText = database[i][4];  //一致したら数値2"順位"
-				document.getElementById("message5").innerText = database[i][5];  //一致したら数値2"順位"
-			}			
+                resultDisplay(database[i][5]);//一致したら数値3に基づいて表示
+            }
         }
+	    function resultDisplay(result) {
+        
+            document.getElementById('rect_'+database[i][5]).style.setProperty("fill","rgba(255,0,0,1)");
+    }
+       
 	  	const a = () => {  
 		
 		window.location.href='record_indi.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
@@ -353,15 +353,14 @@
 		window.location.href='record_home.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
 
 		}	
-		const rect_stamp = document.getElementById("rect-stamp");  // idがrect_stampの要素を取得する
-		rect_stamp.addEventListener("touchend", () => {
+		const record_i = document.getElementById("record_i");  // idがrect_stampの要素を取得する
+		record_i.addEventListener("touchend", () => {
 
 			a();
 		});
 
 		document.getElementById("record_i").addEventListener("touchend", () => { a(); });
-		document.getElementById("record_t"      ).addEventListener("touchend", () => { b(); });
-	    	document.getElementById("record_g"    ).addEventListener("touchend", () => { c(); });
+	    	document.getElementById("record_g").addEventListener("touchend", () => { c(); });
 			
 	}
 </script>

@@ -86,6 +86,11 @@
                 resultDisplay(database[i][4]);//一致したら数値3に基づいて表示
              }
             }
+	    function resultDisplay(result) {
+                 for (i=10; i>=result; i--){
+                     document.getElementById('Ellipse_'+i).style.setProperty("fill","rgba(255,0,0,1)");
+                    }
+                }
 	  	const a = () => {  
 		
 		window.location.href='record_indi.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移

@@ -23,13 +23,13 @@
 <img id="record_g" src="record-gre.PNG">
 
 <div id="user-stamp" onclick="a()" >
-	<span> cal / 500 cal</span>
+	<span> kcal / 500 kcal</span>
 </div>
 <div id="stamp" onclick="a()" >
-	<span>次のスタンプまで　　　　cal<br/>ゴールまで　　　　　　　スタンプ</span>
+	<span>次のスタンプまで　　　　kcal<br/>ゴールまで　　　　　　　スタンプ</span>
 </div>
 <div id="rank" onclick="b()">
-		<span>第１位　　○○さん<br/>第２位　　○○さん<br/>第３位　　○○さん</span>
+		<span>第１位　　kryutaさん<br/>第２位　　i57さん<br/>第３位　　akixoxoさん</span>
 	</div>
 	<div id="user-rank" onclick="b()">
 		<span>あなた　第　　位</span>
@@ -85,11 +85,11 @@
 	white-space: nowrap;
 	text-align: left;
 	font-family: Hiragino Kaku Gothic ProN;
-	font-size: 8.5vw;
+	font-size: 7.5vw;
 	color: rgba(100,99,98,1);
 }
 #message2{
-	left: 20vw;
+	left: 18vw;
 	top: 27vh;
 	position: absolute;
 	overflow: visible;
@@ -97,7 +97,7 @@
 	white-space: nowrap;
 	text-align: left;
 	font-family: Hiragino Kaku Gothic ProN;
-	font-size: 8.5vw;
+	font-size: 8vw;
 	color: rgba(100,99,98,1);
 }
 #stamp {
@@ -206,7 +206,9 @@
 				document.getElementById("message5").innerText = database[i][5];  //一致したら数値2"順位"
 			}			
         }
-	  	const a = () => {  
+	  
+		// function () {}; での関数定義は罠が多いので、const xxx = () => {}; に変更した。
+		const a = () => {  
 		
 		window.location.href='record_indi.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
 
@@ -221,19 +223,26 @@
 		window.location.href='record_home.html?uid='+paramArray.uid; //入力されたユーザIDをURLパラメータに付加してページ遷移
 
 		}	
-		const rect_stamp = document.getElementById("rect-stamp");  // idがrect_stampの要素を取得する
-		rect_stamp.addEventListener("touchend", () => {
 
+		// iOSのsafariにおいて、clickイベントはクリックされる事を前提とした要素（a,buttonなど）
+		// にしか送られないらしい。
+		// そのため、clickイベントではなくtouchendイベントでページ遷移を実行する。
+
+		const rect_stamp = document.getElementById("rect-stamp");  // idがrect_stampの要素を取得する
+
+		// rect_stampのtouchイベントを追加する:
+		rect_stamp.addEventListener("touchend", () => {
+			// ここは要素がタッチされたタイミングで実行される
 			a();
 		});
 
+		// 他の要素についても同様にイベントを追加する
 		document.getElementById("user-stamp").addEventListener("touchend", () => { a(); });
 		document.getElementById("stamp"     ).addEventListener("touchend", () => { a(); });
 		document.getElementById("rect-rank" ).addEventListener("touchend", () => { b(); });
 		document.getElementById("user-rank" ).addEventListener("touchend", () => { b(); });
 		document.getElementById("rank"      ).addEventListener("touchend", () => { b(); });
-	    	document.getElementById("home-g"    ).addEventListener("touchend", () => { c(); });
-			
+		document.getElementById("record_g"  ).addEventListener("touchend", () => { c(); });
 	}
 </script>
 

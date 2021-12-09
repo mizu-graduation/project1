@@ -158,17 +158,17 @@
 		
 		<img id="training1" src="4.PNG">
 		<div id="training1-">
-			<span>トレーニング4. 座ったまま爪先立ち(5秒)
+			<span>トレーニング1. 座ったまま爪先立ち(5秒)
 				<br/>　　　　　　　↓
 				<br/>　　　　　　　元に戻す(5秒)
 				<br/>　　　　　　　↓
-				<br/>　　　　　　　繰り返し(5回)
+				<br/>　　　　　　　繰り返し(6回)
 			</span>
 		</div>
 		<img id="training2" src="6.PNG">
 		<div id="training2-">
-			<span>トレーニング5. 座ったまま足を
-				<br/>　　　　　　　あげてキープ(10秒)
+			<span>トレーニング2. 座ったまま足を
+				<br/>　　　　　　　あげてキープ(30秒)
 			</span>
 		</div>
 		
@@ -260,7 +260,7 @@
 	width: 30vw;
 	height:13vw;
 	left: 60vw;
-	top: 20vh;
+	top: 22vh;
 	overflow: visible;
 	border-radius: 20px;
 }
@@ -274,7 +274,7 @@
 	width: 36vw;
 	height:16vw;
 	left: 55vw;
-	top: 10vh;	
+	top: 9vh;	
 }
 #speed-title {
 	left: 16vw;
@@ -451,19 +451,19 @@
 <script type="text/javascript">
 
 	function keisan(){
-	   var kal1=document.form1.time1.selectedIndex*2;
-	   var kal2=document.form1.time2.selectedIndex*2;
-	   var kal3=document.form1.time3.selectedIndex*2;
-	   var kal4=document.form1.time4.selectedIndex*2;
-	   var kal5=document.form1.time5.selectedIndex*2;
+	   var kal1=document.form1.time1.selectedIndex*2.4;
+	   var kal2=document.form1.time2.selectedIndex*1.5;
+	  // var kal3=document.form1.time3.selectedIndex*2;
+	  // var kal4=document.form1.time4.selectedIndex*2;
+	  // var kal5=document.form1.time5.selectedIndex*2;
 	   var result=kal1 + kal2 + kal3 + kal4 + kal5;
 	   document.form1.total.value = result;
 	}
 	let button = document.getElementById("decision-bottom");
-		button.addEventListener("click", function (e) {
-			e.preventDefault();
-			var send = "<a href=\"mailto:18ad055@ms.dendai.ac.jp?subject=Hi&body=" +document.form1.total.value+ "\">Mail</a>"
-			document.getElementById("decision-bottom").innerHTML = send;
-		})
+    button.addEventListener("click", function (e) {
+        e.preventDefault();
+		var send = "<a href=\"mailto:18ad055@ms.dendai.ac.jp?subject=Hi&body=" +document.form1.total.value+ "\">タップして下さい</a>"
+        document.getElementById("speed-title").innerHTML = send;
+	})
 	</script>
 </html>

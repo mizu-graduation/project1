@@ -83,14 +83,10 @@
         }
        for (i = 0; i < database.length; i++) {
              if (paramArray.uid == database[i][0]) {//uidとデータベースのi番目のユーザIDが一致するか？
-                resultDisplay(database[i][4]);//一致したら数値3に基づいて表示
+                
              }
        } 
-	    function resultDisplay(result) {
-                 for (i=10; i>=result; i--){
-                     document.getElementById('Ellipse_'+i).style.setProperty("fill","rgba(214,144,157,1)");
-                    }
-                }
+	    
        
 	  	const a = () => {  
 		

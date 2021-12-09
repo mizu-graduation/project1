@@ -818,17 +818,17 @@
 <script type="text/javascript">
 
 	function keisan(){
-	   var kal1m=document.form1.time1m.selectedIndex*6.25;
-	   var kal2m=document.form1.time2m.selectedIndex*1.05*4.3;
-	   var kal3m=document.form1.time3m.selectedIndex*1.05*3.5;
-	   var kal4m=document.form1.time4m.selectedIndex*1.05*2.8;
-	   var kal5m=document.form1.time5m.selectedIndex*2.1;
-	   var kal1h=document.form1.time1h.selectedIndex*375;
-	   var kal2h=document.form1.time2h.selectedIndex*63*4.3;
-	   var kal3h=document.form1.time3h.selectedIndex*63*3.5;
-	   var kal4h=document.form1.time4h.selectedIndex*63*2.8;
-	   var kal5h=document.form1.time5h.selectedIndex*126;
-	   var result=kal1m + kal2m + kal3m + kal4m + kal5m + kal1h + kal2h + kal3h + kal4h + kal5h;
+	   var kal1m=document.form1.time1m.selectedIndex*10.5;
+	   var kal2m=document.form1.time2m.selectedIndex*7.14;
+	   var kal3m=document.form1.time3m.selectedIndex*4.2;
+	   var kal4m=document.form1.time4m.selectedIndex*14.7;
+	
+	   var kal1h=document.form1.time1h.selectedIndex*630;
+	   var kal2h=document.form1.time2h.selectedIndex*428.4;
+	   var kal3h=document.form1.time3h.selectedIndex*252;
+	   var kal4h=document.form1.time4h.selectedIndex*882;
+	
+	   var result=kal1m + kal2m + kal3m + kal4m + kal1h + kal2h + kal3h + kal4h ;
 	   document.form1.total.value = result;
 	}
 	let button = document.getElementById("decision-bottom");

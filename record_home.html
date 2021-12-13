@@ -15,6 +15,7 @@
 	<div id="message3">???</div>
 	<div id="message4">???</div>
 	<div id="message5">???</div>
+	<div id="message6">???</div>
 <svg width="100vw" height="100vh">
 	<rect id="rect-stamp" rx="63" ry="63" x="8vw" y="21vh" width="84vw" height="28vh" stroke="rgba(0,253,184,1)" stroke-width="10" fill="rgb(255,255,255)"onclick="a()"></rect>
 	<rect id="rect-rank" rx="63" ry="63" x="8vw" y="55vh" width="84vw" height="28vh" stroke="rgba(0,253,184,1)" stroke-width="10" fill="rgb(255,255,255)" onclick="b()"></rect> 
@@ -23,7 +24,7 @@
 <img id="record_g" src="record-gre.PNG">
 
 <div id="user-stamp" onclick="a()" >
-	<span> kcal / 500 kcal</span>
+	<span> kcal / 　　　　　　　　 kcal</span>
 </div>
 <div id="stamp" onclick="a()" >
 	<span>次のスタンプまで　　　　kcal<br/>ゴールまで　　　　　　　スタンプ</span>
@@ -85,11 +86,23 @@
 	white-space: nowrap;
 	text-align: left;
 	font-family: Hiragino Kaku Gothic ProN;
-	font-size: 7.5vw;
+	font-size: 6.5vw;
 	color: rgba(100,99,98,1);
 }
 #message2{
 	left: 18vw;
+	top: 27vh;
+	position: absolute;
+	overflow: visible;
+	width: 257px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Hiragino Kaku Gothic ProN;
+	font-size: 8vw;
+	color: rgba(100,99,98,1);
+}
+#message6{
+	left: 60vw;
 	top: 27vh;
 	position: absolute;
 	overflow: visible;
@@ -204,6 +217,7 @@
 				document.getElementById("message3").innerText = database[i][3];  //一致したら数値2"順位"
 				document.getElementById("message4").innerText = database[i][4];  //一致したら数値2"順位"
 				document.getElementById("message5").innerText = database[i][5];  //一致したら数値2"順位"
+		    document.getElementById("message6").innerText = database[i][6];  //一致したら数値2"順位"
 			}			
         }
 	  

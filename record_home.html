@@ -27,7 +27,7 @@
 	<span>　kcal / 　　　 kcal</span>
 </div>
 <div id="stamp" onclick="a()" >
-	<span>ゴールまで残り　　　　　　　　　　　kcal<br/>ゴールまで　　　　　　　スタンプ</span>
+	<span>ゴールまで残り　　　　　　　　kcal<br/>ゴールまで　　　　　　　スタンプ</span>
 </div>
 <div id="rank" onclick="b()">
 		<span>第１位　　n.g.さん<br/>第２位　　まさん<br/>第３位　　i57さん</span>
@@ -244,9 +244,9 @@
 
 		const rect_stamp = document.getElementById("rect-stamp");  // idがrect_stampの要素を取得する
 
-		// rect_stampのtouchイベントを追加する:
+	
 		rect_stamp.addEventListener("touchend", () => {
-			// ここは要素がタッチされたタイミングで実行される
+	
 			a();
 		});
 
